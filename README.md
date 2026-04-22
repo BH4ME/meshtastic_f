@@ -34,6 +34,39 @@ Meshtastic enables text messaging, location sharing, and telemetry over a decent
 
 Join our community and help improve Meshtastic! 🚀
 
+### Local Web UI Sync
+
+If you keep a local checkout of the Meshtastic web UI, set:
+
+```bash
+export MESHTASTIC_WEB_SOURCE=/path/to/your/web-repo
+```
+
+Example with an absolute path:
+
+```bash
+export MESHTASTIC_WEB_SOURCE=/Users/bh4me_macair/Documents/Codex/meshtastic-web
+```
+
+Then sync once manually (build hooks also run this automatically for ESP32):
+
+```bash
+./bin/sync-web-ui.sh
+```
+
+During ESP32 builds, `bin/platformio-pre.py` will sync that checkout into `data/static/`
+before PlatformIO builds the LittleFS image. By default, builds fall back to the pinned
+`meshtastic/web` release bundle recorded in `bin/web.version`.
+
+The same sync helper is also used by the Linux packaging paths, so `debian/ci_pack_sdeb.sh`,
+`Dockerfile`, and RPM prep can all consume the same web source.
+
+Optional overrides:
+
+- `MESHTASTIC_WEB_BUILD_CMD` to force the local web build command
+- `MESHTASTIC_WEB_DIST_DIR` if your web build output is not `dist`
+- `MESHTASTIC_WEB_SKIP_BUILD=1` to copy an already-built local `dist/`
+
 ## Stats
 
 ![Alt](https://repobeats.axiom.co/api/embed/8025e56c482ec63541593cc5bd322c19d5c0bdcf.svg "Repobeats analytics image")

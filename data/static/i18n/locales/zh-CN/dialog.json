@@ -1,0 +1,238 @@
+{
+  "deleteMessages": {
+    "description": "此操作将清除所有消息历史，且无法撤销。你确定要继续吗？",
+    "title": "清除全部消息"
+  },
+  "import": {
+    "description": "当前的 LoRa 配置将被覆盖。",
+    "error": {
+      "invalidUrl": "无效的 Mecho URL"
+    },
+    "channelPrefix": "频道：",
+    "primary": "主频道 ",
+    "doNotImport": "不导入",
+    "channelName": "名称",
+    "channelSlot": "槽位",
+    "channelSetUrl": "频道集/二维码链接",
+    "useLoraConfig": "导入 LoRa 配置",
+    "presetDescription": "当前的 LoRa 配置将被替换。",
+    "title": "导入频道集"
+  },
+  "locationResponse": {
+    "title": "位置：{{identifier}}",
+    "altitude": "海拔：",
+    "coordinates": "坐标：",
+    "noCoordinates": "无坐标"
+  },
+  "pkiRegenerateDialog": {
+    "title": "重新生成预共享密钥？",
+    "description": "你确定要重新生成预共享密钥吗？",
+    "regenerate": "重新生成"
+  },
+  "addConnection": {
+    "title": "添加连接",
+    "description": "选择连接类型并填写详细信息",
+    "validation": {
+      "requiresWebBluetooth": "此连接类型需要 <0>Web Bluetooth</0>。请使用受支持的浏览器，例如 Chrome 或 Edge。",
+      "requiresWebSerial": "此连接类型需要 <0>Web Serial</0>。请使用受支持的浏览器，例如 Chrome 或 Edge。",
+      "requiresSecureContext": "此应用需要 <0>安全上下文</0>。请使用 HTTPS 或 localhost 连接。",
+      "additionallyRequiresSecureContext": "此外，它也需要 <0>安全上下文</0>。请使用 HTTPS 或 localhost 连接。"
+    },
+    "bluetoothConnection": {
+      "namePlaceholder": "我的蓝牙节点",
+      "supported": {
+        "title": "支持 Web Bluetooth"
+      },
+      "notSupported": {
+        "title": "不支持 Web Bluetooth",
+        "description": "你的浏览器或设备不支持 Web Bluetooth"
+      },
+      "short": "蓝牙：{{deviceName}}",
+      "long": "蓝牙设备",
+      "device": "设备",
+      "selectDevice": "选择设备",
+      "selected": "已选择蓝牙设备",
+      "notSelected": "尚未选择设备",
+      "helperText": "使用 Mecho 蓝牙服务进行发现。"
+    },
+    "serialConnection": {
+      "namePlaceholder": "我的串口节点",
+      "helperText": "选择端口后会授予权限，应用即可打开它进行连接。",
+      "supported": {
+        "title": "支持 Web Serial"
+      },
+      "notSupported": {
+        "title": "不支持 Web Serial",
+        "description": "你的浏览器或设备不支持 Web Serial"
+      },
+      "portSelected": {
+        "title": "已选择串口",
+        "description": "已授予端口权限。"
+      },
+      "port": "端口",
+      "selectPort": "选择端口",
+      "deviceName": "USB {{vendorId}}:{{productId}}",
+      "notSelected": "尚未选择端口"
+    },
+    "httpConnection": {
+      "namePlaceholder": "我的 HTTP 节点",
+      "inputPlaceholder": "192.168.1.10 或 mecho.local",
+      "heading": "URL 或 IP",
+      "useHttps": "使用 HTTPS",
+      "invalidUrl": {
+        "title": "无效 URL",
+        "description": "请输入有效的 HTTP 或 HTTPS URL。"
+      },
+      "connectionTest": {
+        "description": "保存前测试连接，确认设备可达。",
+        "button": {
+          "loading": "测试中...",
+          "label": "测试连接"
+        },
+        "reachable": "可达",
+        "notReachable": "不可达",
+        "success": {
+          "title": "连接测试成功",
+          "description": "设备似乎可以访问。"
+        },
+        "failure": {
+          "title": "连接测试失败",
+          "description": "无法访问设备。请检查 URL 后重试。"
+        }
+      }
+    }
+  },
+  "nodeDetails": {
+    "message": "信息",
+    "requestPosition": "请求位置",
+    "traceRoute": "追踪路由",
+    "airTxUtilization": "空口发送占用率",
+    "allRawMetrics": "全部原始指标：",
+    "batteryLevel": "电池电量",
+    "channelUtilization": "信道占用率",
+    "details": "详情：",
+    "deviceMetrics": "设备指标：",
+    "hardware": "硬件：",
+    "lastHeard": "最近在线：",
+    "nodeHexPrefix": "节点十六进制：",
+    "nodeNumber": "节点编号：",
+    "position": "位置：",
+    "role": "角色：",
+    "uptime": "运行时间：",
+    "voltage": "电压",
+    "title": "{{identifier}} 的节点详情",
+    "ignoreNode": "忽略节点",
+    "removeNode": "移除节点",
+    "unignoreNode": "取消忽略节点",
+    "security": "安全：",
+    "publicKey": "公钥：",
+    "messageable": "可发消息：",
+    "KeyManuallyVerifiedTrue": "公钥已手动验证",
+    "KeyManuallyVerifiedFalse": "公钥尚未手动验证"
+  },
+  "pkiBackup": {
+    "loseKeysWarning": "如果丢失密钥，你需要重置设备。",
+    "secureBackup": "请务必备份你的公钥和私钥，并妥善保管备份！",
+    "footer": "=== 密钥结束 ===",
+    "header": "=== {{longName}}（{{shortName}}）的 MECHO 密钥 ===",
+    "privateKey": "私钥：",
+    "publicKey": "公钥：",
+    "fileName": "mecho_keys_{{longName}}_{{shortName}}.txt",
+    "title": "备份密钥"
+  },
+  "pkiBackupReminder": {
+    "description": "我们建议定期备份你的密钥数据。要现在备份吗？",
+    "title": "备份提醒",
+    "remindLaterPrefix": "稍后提醒我",
+    "remindNever": "不再提醒",
+    "backupNow": "立即备份"
+  },
+  "pkiRegenerate": {
+    "description": "你确定要重新生成密钥对吗？",
+    "title": "重新生成密钥对"
+  },
+  "qr": {
+    "addChannels": "添加频道",
+    "replaceChannels": "替换频道",
+    "description": "当前的 LoRa 配置也会一并分享。",
+    "sharableUrl": "可分享链接",
+    "title": "生成二维码"
+  },
+  "reboot": {
+    "title": "重启设备",
+    "description": "立即重启，或为已连接节点安排重启。你也可以选择重启到 OTA（空中升级）模式。",
+    "ota": "重启到 OTA 模式",
+    "enterDelay": "输入延迟",
+    "scheduled": "已安排重启",
+    "schedule": "安排重启",
+    "now": "立即重启",
+    "cancel": "取消已安排重启"
+  },
+  "refreshKeys": {
+    "description": {
+      "acceptNewKeys": "这将从设备中移除该节点并请求新密钥。",
+      "keyMismatchReasonSuffix": "。这是因为远端节点当前的公钥与此前为该节点保存的密钥不匹配。",
+      "unableToSendDmPrefix": "你的节点无法向以下节点发送私信："
+    },
+    "acceptNewKeys": "接受新密钥",
+    "title": "密钥不匹配 - {{identifier}}"
+  },
+  "removeNode": {
+    "description": "你确定要移除此节点吗？",
+    "title": "移除节点？"
+  },
+  "shutdown": {
+    "title": "安排关机",
+    "description": "在 x 分钟后关闭已连接的节点。"
+  },
+  "traceRoute": {
+    "routeToDestination": "前往目标路径：",
+    "routeBack": "返回路径："
+  },
+  "tracerouteResponse": {
+    "title": "路由追踪：{{identifier}}"
+  },
+  "unsafeRoles": {
+    "confirmUnderstanding": "是的，我知道我在做什么",
+    "conjunction": " 以及关于 ",
+    "postamble": " 的博客文章，并理解更改角色的影响。",
+    "preamble": "我已经阅读了 ",
+    "choosingRightDeviceRole": "如何选择正确的设备角色",
+    "deviceRoleDocumentation": "设备角色文档",
+    "title": "是否确认？"
+  },
+  "managedMode": {
+    "confirmUnderstanding": "是的，我知道我在做什么",
+    "title": "是否确认？",
+    "description": "启用受管模式后，客户端应用（包括网页客户端）将无法向电台写入配置。启用后，电台配置只能通过远程管理消息更改。远程节点管理不需要开启此设置。"
+  },
+  "clientNotification": {
+    "title": "客户端通知",
+    "TraceRoute can only be sent once every 30 seconds": "追踪路由每 30 秒只能发送一次",
+    "Compromised keys were detected and regenerated.": "已检测到密钥泄露并重新生成。"
+  },
+  "resetNodeDb": {
+    "title": "重置节点数据库",
+    "description": "这将清除已连接设备节点数据库中的所有节点，并清除客户端中的所有消息历史。此操作无法撤销。你确定要继续吗？",
+    "confirm": "重置节点数据库",
+    "failedTitle": "重置节点数据库时出错。请重试。"
+  },
+  "clearAllStores": {
+    "title": "清除全部本地存储",
+    "description": "这将清除所有本地存储的数据，包括之前连接设备的消息历史和节点数据库。完成后你需要重新连接节点，此操作无法撤销。你确定要继续吗？",
+    "confirm": "清除全部本地存储",
+    "failedTitle": "清除本地存储时出错。请重试。"
+  },
+  "factoryResetDevice": {
+    "title": "恢复设备出厂设置",
+    "description": "这将把已连接设备恢复为出厂设置，清除设备上的所有配置和数据，以及客户端中保存的所有节点和消息。此操作无法撤销。你确定要继续吗？",
+    "confirm": "恢复设备出厂设置",
+    "failedTitle": "执行恢复出厂设置时出错。请重试。"
+  },
+  "factoryResetConfig": {
+    "title": "恢复配置出厂设置",
+    "description": "这将把已连接设备上的配置恢复为出厂设置，清除设备上的所有配置。此操作无法撤销。你确定要继续吗？",
+    "confirm": "恢复配置出厂设置",
+    "failedTitle": "执行恢复出厂设置时出错。请重试。"
+  }
+}

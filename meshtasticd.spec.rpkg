@@ -72,10 +72,8 @@ text communication platform that uses inexpensive LoRa radios.
 
 %prep
 {{{ git_dir_setup_macro }}}
-# Unpack the web files
-mkdir -p web
-tar -xf %{SOURCE1} -C web
-gzip -dr web
+# Sync the web files from either a local checkout or the pinned release bundle
+%{__python3} bin/web_ui_sync.py --project-dir . --output-dir web
 
 %build
 # Use the “native-tft” environment from platformio to build a Linux binary

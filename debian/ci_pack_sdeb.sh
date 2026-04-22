@@ -17,9 +17,7 @@ jq -c 'with_entries(.value |= (. | tostring + "1" | tonumber))' pio/core/.cache/
 # Compress `pio` directory to prevent dh_clean from sanitizing it
 tar -cf pio.tar pio/
 rm -rf pio
-# Download the meshtastic/web release build.tar to `web.tar`
-web_ver=$(cat bin/web.version)
-curl -L "https://github.com/meshtastic/web/releases/download/v$web_ver/build.tar" -o web.tar
+python3 bin/web_ui_sync.py --project-dir . --output-dir web
 
 package=$(dpkg-parsechangelog --show-field Source)
 

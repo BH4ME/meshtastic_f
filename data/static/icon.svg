@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="mechoIconTitle">
+  <title id="mechoIconTitle">Mecho icon</title>
+  <rect width="512" height="512" rx="136" fill="#F4F8F4" />
+  <path
+    d="M136 360V172l120 116 120-116v184"
+    fill="none"
+    stroke="#17392B"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="40"
+  />
+  <circle cx="256" cy="288" r="16" fill="#58C27D" />
+  <path
+    d="M314 140c29 0 52 23 52 52"
+    fill="none"
+    stroke="#58C27D"
+    stroke-linecap="round"
+    stroke-width="22"
+  />
+  <path
+    d="M314 100c51 0 92 41 92 92"
+    fill="none"
+    stroke="#58C27D"
+    stroke-linecap="round"
+    stroke-width="22"
+  />
+</svg>

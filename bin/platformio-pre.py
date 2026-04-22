@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 # trunk-ignore-all(ruff/F821)
 # trunk-ignore-all(flake8/F821): For SConstruct imports
+import sys
+import subprocess
+from pathlib import Path
+
 Import("env")
 platform = env.PioPlatform()
 
@@ -17,3 +21,8 @@ else:
 print(f"PROGNAME: {env.get('PROGNAME')}")
 if platform.name == "espressif32":
     print(f"ESP32_FS_IMAGE_NAME: {env.get('ESP32_FS_IMAGE_NAME')}")
+
+    # Keep ESP32 LittleFS contents in sync with either a local web checkout or the
+    # pinned release bundle before PlatformIO decides what needs rebuilding.
+    web_sync_script = Path(env["PROJECT_DIR"]) / "bin" / "web_ui_sync.py"
+    subprocess.run([sys.executable, str(web_sync_script), "--project-dir", env["PROJECT_DIR"]], check=True)
